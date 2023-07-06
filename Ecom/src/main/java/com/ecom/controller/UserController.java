@@ -1,7 +1,7 @@
 package com.ecom.controller;
 
 
-import com.ecom.dto.ApiResponse;
+import com.ecom.helper.ApiResponse;
 import com.ecom.dto.UserDto;
 import com.ecom.service.UserService;
 
@@ -38,7 +38,7 @@ public class UserController {
     }
 
 
-    @GetMapping("/userId/{userId}")
+    @GetMapping("/{usId}")
     ResponseEntity<UserDto> getUserById(@PathVariable String userId) {
 
         UserDto userDto1 = this.us.getUserById(userId);
@@ -48,7 +48,7 @@ public class UserController {
     }
 
 
-    @GetMapping("/email/{email}")
+    @GetMapping("/{email}")
     ResponseEntity<UserDto> getUserByEmail(@PathVariable String email) {
 
         UserDto userDto1 = this.us.getUserByEmail(email);
@@ -58,7 +58,7 @@ public class UserController {
     }
 
 
-    @GetMapping("/emailandpassword/{email}/{password}")
+    @GetMapping("/emp/{email}/{password}")
     ResponseEntity<UserDto> getUserByEmailAndPassword(@PathVariable String email, @PathVariable String password) {
 
         UserDto userDto1 = this.us.getUserByUsernamePassword(email, password);
@@ -68,7 +68,7 @@ public class UserController {
     }
 
 
-    @GetMapping("/allusers")
+    @GetMapping("/allus")
     ResponseEntity<List<UserDto>> getAllUser() {
 
         List<UserDto> userDto1 = this.us.getAllUsers();

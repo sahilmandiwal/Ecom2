@@ -7,11 +7,13 @@ import com.ecom.repository.UserRepo;
 import com.ecom.service.UserService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
+@Service
 public class UserServiceImpl implements UserService {
 
     @Autowired
@@ -37,6 +39,7 @@ public class UserServiceImpl implements UserService {
                 .password(userDto.getPassword())
                 .gender(userDto.getGender())
                 .about(userDto.getAbout())
+                .about(userDto.getImage())
                 .build();
 
         User updatedUser = this.userRepository.save(user1);

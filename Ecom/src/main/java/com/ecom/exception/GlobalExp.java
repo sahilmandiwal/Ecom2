@@ -1,6 +1,6 @@
 package com.ecom.exception;
 
-import com.ecom.dto.ApiResponse;
+import com.ecom.helper.ApiResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
