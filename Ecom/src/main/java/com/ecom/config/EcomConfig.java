@@ -12,4 +12,8 @@ public class EcomConfig {
         return new ModelMapper();
     }
 
+    public static void main(String[] args) {
+        System.out.println("Demo");
+    }
+
 }
